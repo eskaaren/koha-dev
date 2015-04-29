@@ -1,4 +1,4 @@
-package C4::External::LIBRISSpellcheck;
+package Koha::SuggestionEngine::Plugin::LibrisSpellcheck;
 # Copyright (C) 2015 Eivin Giske Skaaren
 #
 # This file is part of Koha.
@@ -20,31 +20,42 @@ use Modern::Perl;
 use LWP::UserAgent;
 use XML::Simple qw(XMLin);
 use C4::Context;
+use base qw(Koha::SuggestionEngine::Base);
 
-sub get_suggestion {
+sub NAME {
+    return 'LibrisSpellcheck';
+}
+
+sub get_suggestions {
     my ($self, $query) = @_;
-    my $key = C4::Context->preference('LIBRISKey');    
+    my $key = C4::Context->preference('LibrisKey');    
 
-    my $response = LWP::UserAgent->new->get("http://api.libris.kb.se/bibspell/spell?query={$query}&key=$key");
-    my $xml = XMLin($response->content);
+    my $search = $query->{'search'};
+    my $response = LWP::UserAgent->new->get("http://api.libris.kb.se/bibspell/spell?query={$search}&key=$key");
+    my $xml = XMLin($response->content, NoAttr => 1, ForceArray => qr/term/);
 
-    my @result;
+    my @terms;
+    my $label;
+    
     if ($xml->{suggestion}->{term}) {
-        if (ref($xml->{suggestion}->{term}) eq 'ARRAY') {
-            for (@{$xml->{suggestion}->{term}}) {
-                if (/^HASH\(\d+/) {
-                    push @result, $_->{content};
-                } else {
-                    push @result, $_;
-                }
-            }
-        } else {
-            return $xml->{suggestion}->{term};
+        for (@{$xml->{suggestion}->{term}}) {
+            push @terms, $_;
         }
-        return join(' ', @result);
+        $label = join(' ', @terms);
     } else {
-        return "No suggestion from LIBRIS.";
+        return; # No result from LIBRIS 
     }
+
+    my @results;
+    push @results,
+    {
+        'search'  => $label,  #$thissearch,
+        relevance => 100,
+            # FIXME: it'd be nice to have some empirical measure of
+            #        "relevance" in this case, but we don't.
+        label => $label
+    };
+    return \@results;
 }
 
 1;
@@ -52,7 +63,7 @@ __END__
 
 =head1 NAME
 
-C4::External::LIBRISSpellcheck - For connectiong to the LIBRIS spell checker API
+Koha::SuggestionEngine::Plugin::LibrisSpellcheck
 
 =head2 FUNCTIONS
 
@@ -60,7 +71,7 @@ This module provides facilities for using the LIBRIS spell checker API
 
 =over
 
-=item get_suggestion(query)
+=item get_suggestions(query)
 
 Sends in the search query and gets an XML with a suggestion
 
