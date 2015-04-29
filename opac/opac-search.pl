@@ -42,7 +42,6 @@ use C4::Branch; # GetBranches
 use C4::SocialData;
 use C4::Ratings;
 use C4::External::OverDrive;
-use C4::External::LIBRISSpellcheck;
 
 use POSIX qw(ceil floor strftime);
 use URI::Escape;
@@ -138,9 +137,7 @@ elsif (C4::Context->preference("marcflavour") eq "MARC21" ) {
     $template->param('usmarc' => 1);
 }
 
-#egs
-#$template->param( 'OPACNoResultsFound' => C4::Context->preference('OPACNoResultsFound') );
-#$template->param( 'OPACNoResultsFound' => C4::External::LIBRISSpellcheck->get_suggestion($template->{VARS}->{querystring}) );
+$template->param( 'OPACNoResultsFound' => C4::Context->preference('OPACNoResultsFound') );
 
 $template->param(
     OpacStarRatings => C4::Context->preference("OpacStarRatings") );
@@ -436,9 +433,6 @@ my @operands = $cgi->param('q');
 @operands = map { uri_unescape($_) } @operands;
 
 $template->{VARS}->{querystring} = join(' ', @operands);
-
-#egs
-$template->param( 'OPACNoResultsFound' => C4::External::LIBRISSpellcheck->get_suggestion($template->{VARS}->{querystring}) );
 
 # if a simple search, display the value in the search box
 if ($operands[0] && !$operands[1]) {
