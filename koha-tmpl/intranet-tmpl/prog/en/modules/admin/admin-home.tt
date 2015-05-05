@@ -86,6 +86,8 @@
     <dd>Manage OAI Sets</dd>
     <dt><a href="/cgi-bin/koha/admin/items_search_fields.pl">Items search fields</a></dt>
     <dd>Manage custom fields for items search</dd>
+    <dt><a href="/cgi-bin/koha/admin/ftp_import.pl">Import from FTP</a></dt>
+    <dd>Import MARC records from a file on a FTP server</dd>
 </dl>
 
 <h3>Acquisition parameters</h3>
