@@ -19,7 +19,7 @@
             <p>
                 This form triggers the ftp2koha.pl script and is a way to perform import of MARC records from a file downloaded from a FTP server.
             </p>
-            <form action="demo_form.asp" method="get">
+            <form action="/cgi-bin/koha/admin/ftp_import.pl" method="post">
                 <table id="ftp_import_table">
                     <tr>
                         <td>FTP host:</td>
@@ -50,6 +50,10 @@
                         <td><input type="text" name="koha_site"></td>
                     </tr>
                     <tr>
+                        <td>Path to ftp2koha.pl:</td>
+                        <td><input type="text" name="ftp2koha"></td>
+                    </tr>
+                    <tr>
                         <td></td>
                         <td>
                             <input type="button" style="float: left; margin-right: 2em" value="Load">
@@ -67,6 +71,7 @@
 </div>
 </div>
 [% INCLUDE 'intranet-bottom.inc' %]
+</script>
 <style>
 #ftp_import_table>tbody>tr>td>textarea {
     width: 300px;

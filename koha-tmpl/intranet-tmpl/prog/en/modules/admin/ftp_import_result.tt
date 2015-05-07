@@ -1,0 +1,34 @@
+[% INCLUDE 'doc-head-open.inc' %]
+<title>Koha &rsaquo; Administration &rsaquo; FTP import</title>
+[% INCLUDE 'doc-head-close.inc' %]
+<script>
+</script>
+</head>
+<body id="admin_ftp_import" class="admin">
+[% INCLUDE 'header.inc' %]
+[% INCLUDE 'cat-search.inc' %]
+<div id="breadcrumbs"><a href="/cgi-bin/koha/mainpage.pl">Home</a> &rsaquo; <a href="/cgi-bin/koha/admin/admin-home.pl">Administration</a> &rsaquo; FTP import</div>
+
+<div id="doc3" class="yui-t2">
+
+    <div id="bd">
+    <div id="yui-main">
+    <div class="yui-b">
+        <h3>FPT import</h3>
+        <div id="ftp_import">
+	    [% output %]
+        </div>
+
+        </div>
+        </div>
+<div class="yui-b">
+[% INCLUDE 'admin-menu.inc' %]
+</div>
+</div>
+[% INCLUDE 'intranet-bottom.inc' %]
+</script>
+<style>
+#ftp_import_table>tbody>tr>td>textarea {
+    width: 300px;
+}
+</style>

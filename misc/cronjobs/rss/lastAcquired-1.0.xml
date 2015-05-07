@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+>
+  <channel rdf:about="http://www.koha-community.org">
+    <title>Recent Acquisitions</title>
+    <link>http://www.koha-community.org</link>
+    <description>The library's 15 most recent acquisitions</description>
+    <language>en</language>
+    <lastBuildDate>Wed, 06 May 2015 18:46:38 UTC</lastBuildDate>
+     <image rdf:about="http://www.koha-community.org/images/foo.jpg">
+      <title>Koha, the worlds best Open Source Library System</title>
+      <url>http://www.koha-community.org/images/foo.jpg</url>
+      <link>http://www.koha-community.org</link>
+     </image>
+    <items>
+      <rdf:Seq>
+      
+        <rdf:li resource="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-detail.pl?biblionumber="/>
+      
+        <rdf:li resource="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-detail.pl?biblionumber="/>
+      
+        <rdf:li resource="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-detail.pl?biblionumber="/>
+      
+        <rdf:li resource="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-detail.pl?biblionumber="/>
+      
+      </rdf:Seq>
+    </items>
+</channel>
+
+  
+  <item rdf:about="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-detail.pl?biblionumber=">
+  <title></title>
+  <link>arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-detail.pl?biblionumber=</link>
+<description><![CDATA[
+<br> O'Reilly, 
+<br> ill. ; 23 cm.
+<br><br>Includes index.<br>
+<a href="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-detail.pl?biblionumber=2">View Details</a> | <a href="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-reserve.pl?biblionumber=2">Reserve this Item</a> | <a href="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-search.pl?marclist=biblio.author&amp;and_or=and&amp;excluding=&amp;operator=contains&amp;value=Albing, Carl.&amp;resultsperpage=20&amp;orderby=biblio.title&amp;op=do_search">More by this Author</a>
+]]></description>
+ </item>
+
+  <item rdf:about="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-detail.pl?biblionumber=">
+  <title></title>
+  <link>arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-detail.pl?biblionumber=</link>
+<description><![CDATA[
+<br> O'Reilly, 
+<br> ill. ; 24 cm.
+<br><br>Includes index.<br>
+<a href="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-detail.pl?biblionumber=3">View Details</a> | <a href="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-reserve.pl?biblionumber=3">Reserve this Item</a> | <a href="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-search.pl?marclist=biblio.author&amp;and_or=and&amp;excluding=&amp;operator=contains&amp;value=Newham, Cameron.&amp;resultsperpage=20&amp;orderby=biblio.title&amp;op=do_search">More by this Author</a>
+]]></description>
+ </item>
+
+  <item rdf:about="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-detail.pl?biblionumber=">
+  <title></title>
+  <link>arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-detail.pl?biblionumber=</link>
+<description><![CDATA[
+<br>  
+<br>  10
+<br>
+<a href="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-detail.pl?biblionumber=1">View Details</a> | <a href="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-reserve.pl?biblionumber=1">Reserve this Item</a>
+]]></description>
+ </item>
+
+  <item rdf:about="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-detail.pl?biblionumber=">
+  <title></title>
+  <link>arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-detail.pl?biblionumber=</link>
+<description><![CDATA[
+<br>  
+<br>  10
+<br>
+<a href="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-detail.pl?biblionumber=1">View Details</a> | <a href="arcsrv.arcaneengineering.se:8080/cgi-bin/koha/opac-reserve.pl?biblionumber=1">Reserve this Item</a>
+]]></description>
+ </item>
+
+</rdf:RDF>
