@@ -31,7 +31,7 @@
 
 <ul>
     [% IF ( CAN_user_circulate ) %]<li><a onclick="keep_text()" href="#circ_search">Check out</a></li>[% END %]
-    [% IF ( CAN_user_circulate ) %]<li><a onclick="keep_text()"  href="#checkin_search">Check iin</a></li>[% END %]
+    [% IF ( CAN_user_circulate ) %]<li><a onclick="keep_text()"  href="#checkin_search">Check in</a></li>[% END %]
     [% IF ( CAN_user_borrowers ) %]<li><a onclick="keep_text()" href="#patron_search">Search patrons</a></li>[% END %]
     [% IF ( CAN_user_catalogue ) %]<li><a onclick="keep_text()" href="#catalog_search">Search the catalog</a></li>[% END %]
 </ul>
