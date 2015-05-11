@@ -31,7 +31,7 @@
 
 <ul>
     [% IF ( CAN_user_circulate ) %]<li><a onclick="keep_text()" href="#circ_search">Check out</a></li>[% END %]
-    [% IF ( CAN_user_circulate ) %]<li><a onclick="keep_text()"  href="#checkin_search">Check in</a></li>[% END %]
+    [% IF ( CAN_user_circulate ) %]<li><a onclick="keep_text()" href="#checkin_search">Check in</a></li>[% END %]
     [% IF ( CAN_user_borrowers ) %]<li><a onclick="keep_text()" href="#patron_search">Search patrons</a></li>[% END %]
     [% IF ( CAN_user_catalogue ) %]<li><a onclick="keep_text()" href="#catalog_search">Search the catalog</a></li>[% END %]
 </ul>
@@ -47,14 +47,23 @@
 
 <script>
 function keep_text() {
-    var queries = document.getElementsByClassName("query");
-    var persist = "";
-    for (i = 0; i < queries.length; i++) {
-        if (queries[i].value) {
-            persist = queries[i].value;
-            break;
+    var  queries = document.getElementsByClassName("query");
+    var persist = queries[0].value;
+   
+    for (i = 0; i < queries.length - 1; i++) {
+        if (queries[i].value != queries[i+1].value) {
+            if (i === queries.length-2) {
+                if (queries[i].value != queries[0].value) {
+                    persist = queries[i].value;
+                } else {
+                    persist = queries[i+1].value;
+                }
+            } else if (queries[i+1].value != queries[i+2].value) {
+                persist = queries[i+1].value;
+            }
         }
     }
+ 
     for (i = 0; i < queries.length; i++) {
         queries[i].value = persist;
     }
