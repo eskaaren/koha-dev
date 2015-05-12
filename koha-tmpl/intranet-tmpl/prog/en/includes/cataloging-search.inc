@@ -5,7 +5,7 @@
         <div id="addbooks_search" class="residentsearch">
         <p class="tip">Search the catalog and the reservoir:</p>
             <form name="search" action="addbooks.pl">
-                <input type="text" name="q" size="40" />
+                <input class="query" type="text" name="q" size="40" />
                 <input type="submit" class="submit" value="Submit" />
             </form>
         </div>
@@ -14,7 +14,7 @@
         <div id="checkin_search" class="residentsearch">
             <p class="tip">Scan a barcode to check in:</p>
             <form method="post" action="/cgi-bin/koha/circ/returns.pl" autocomplete="off">
-                <input name="barcode" id="ret_barcode" size="40" />
+                <input class="query" name="barcode" id="ret_barcode" size="40" />
                 <input value="Submit" class="submit" type="submit" />
             </form>
         </div>
@@ -23,18 +23,19 @@
         <div id="catalog_search" class="residentsearch">
             <p class="tip">Enter search keywords:</p>
             <form action="/cgi-bin/koha/catalogue/search.pl"  method="get" id="cat-search-block">
-                <input type="text" name="q" id="search-form" size="40" value="" title="Enter the terms you wish to search for." class="form-text" />
+                <input type="text" name="q" id="search-form" size="40" value="" title="Enter the terms you wish to search for." class="query form-text" />
                 <input type="submit" class="submit" value="Submit" />
             </form>
         </div>
 
         [% INCLUDE 'patron-search-box.inc' %]
         <ul>
-            <li><a href="#addbooks_search">Cataloging search</a></li>
-            [% IF ( CAN_user_circulate ) %]<li><a href="#circ_search">Check out</a></li>[% END %]
-            [% IF ( CAN_user_circulate ) %]<li><a href="#checkin_search">Check in</a></li>[% END %]
-            <li><a href="#catalog_search">Search the catalog</a></li>
+            <li><a onclick="keep_text()" href="#addbooks_search">Cataloging search</a></li>
+            [% IF ( CAN_user_circulate ) %]<li><a onclick="keep_text()" href="#circ_search">Check out</a></li>[% END %]
+            [% IF ( CAN_user_circulate ) %]<li><a onclick="keep_text()" href="#checkin_search">Check in</a></li>[% END %]
+            <li><a onclick="keep_text()" href="#catalog_search">Search the catalog</a></li>
         </ul>
     </div><!-- /header_search -->
 </div><!-- /gradient -->
+[% INCLUDE 'searchbox-keep-text.inc' %]
 <!-- End Cataloging Resident Search Box -->
