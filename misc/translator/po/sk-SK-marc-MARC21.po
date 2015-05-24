@@ -2,24 +2,24 @@
 # Copyright (C) 2009 Koha Translation team and individual translators
 # This file is distributed under the same license as the Koha package.
 # Marian Hvolka <marian.hvolka@stuba.sk>, 2009.
-# Paul Vilhan <paul.vilhan@gmail.com>, 2011, 2012, 2013, 2014.
+# Paul Vilhan <paul.vilhan@gmail.com>, 2011, 2012, 2013, 2014, 2015.
 # Paul <vilhan@xaver.sk>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: KOHA 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-29 16:15-0300\n"
-"PO-Revision-Date: 2014-11-28 11:32+0200\n"
+"POT-Creation-Date: 2015-04-30 14:11-0300\n"
+"PO-Revision-Date: 2015-05-12 13:34+0200\n"
 "Last-Translator: paul <paul.vilhan@gmail.com>\n"
 "Language-Team: Slovak team\n"
-"Language: sk-SK\n"
+"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Virtaal 0.7.1\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-POOTLE-MTIME: 1410857031.0\n"
+"X-POOTLE-MTIME: 1417220727.000000\n"
 
 #: intranet-tmpl/prog/en/xslt/MARC21slimUtils-MODS31.xsl:12
 #, c-format
@@ -27,8 +27,8 @@ msgid ""
 "!\"#$%%&amp;'()*+,-./0123456789:;&lt;=&gt;?"
 "@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
 msgstr ""
-"!\"#$%%'()*+,-./0123456789:;&lt;=&gt;?"
-"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
+"!\"#$%%'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdef"
+"ghijklmnopqrstuvwxyz{|}~"
 
 #: intranet-tmpl/prog/en/xslt/MARC21slimUtils-MODS31.xsl:20
 #, c-format
@@ -2562,9 +2562,9 @@ msgstr "cr- Cyrillic"
 
 #: intranet-tmpl/prog/en/xslt/MARC21slim2intranetDetail.xsl:608
 #: opac-tmpl/bootstrap/en/xslt/MARC21slim2OPACDetail.xsl:669
-#, fuzzy, c-format
+#, c-format
 msgid "DDC classification: "
-msgstr "Triedenie: "
+msgstr "Triedenie DDC: "
 
 #: intranet-tmpl/prog/en/data/marc21_field_008.xml:1009
 #: intranet-tmpl/prog/en/data/marc21_field_006.xml:523
@@ -3320,9 +3320,9 @@ msgstr "Všeobecné; "
 
 #: intranet-tmpl/prog/en/xslt/MARC21slim2intranetDetail.xsl:574
 #: opac-tmpl/bootstrap/en/xslt/MARC21slim2OPACDetail.xsl:635
-#, fuzzy, c-format
+#, c-format
 msgid "Genre/Form: "
-msgstr "Formát: "
+msgstr "Žáner/Forma: "
 
 #: intranet-tmpl/prog/en/data/marc21_field_008.xml:613
 #: intranet-tmpl/prog/en/data/marc21_field_006.xml:270
@@ -5782,9 +5782,9 @@ msgstr "Produkt"
 
 #: intranet-tmpl/prog/en/xslt/MARC21slim2intranetDetail.xsl:703
 #: opac-tmpl/bootstrap/en/xslt/MARC21slim2OPACDetail.xsl:805
-#, fuzzy, c-format
+#, c-format
 msgid "Production Credits: "
-msgstr "Production elements"
+msgstr "Zodpovední za výrobu: "
 
 #: intranet-tmpl/prog/en/data/marc21_field_008.xml:790
 #: intranet-tmpl/prog/en/data/marc21_field_006.xml:377
@@ -8377,9 +8377,9 @@ msgstr "dostupné online "
 #: intranet-tmpl/prog/en/xslt/MARC21slim2intranetDetail.xsl:595
 #: opac-tmpl/bootstrap/en/xslt/MARC21slim2OPACDetail.xsl:644
 #: opac-tmpl/bootstrap/en/xslt/MARC21slim2OPACDetail.xsl:657
-#, fuzzy, c-format
+#, c-format
 msgid "avxyz"
-msgstr "abvxyz"
+msgstr "avxyz"
 
 #: intranet-tmpl/prog/en/xslt/MARC21slim2intranetDetail.xsl:779
 #, c-format

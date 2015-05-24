@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: koha\n"
-"POT-Creation-Date: 2015-04-29 16:08-0300\n"
+"POT-Creation-Date: 2015-05-19 16:15-0300\n"
 "PO-Revision-Date: 2013-06-19 01:21+0300\n"
 "Last-Translator: Harem Abdullah <harem.suli@gmail.com>\n"
 "Language-Team: kurdish translation team\n"
-"Language: ku-SOR\n"
+"Language: ku\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -870,7 +870,7 @@ msgstr "(!واتە 'نابینرێت' یان لە کاتی هێنانەخوار�
 #: intranet-tmpl/prog/en/modules/help/tools/viewlog.tt:11
 #: intranet-tmpl/prog/en/modules/help/tools/marc_modification_templates.tt:61
 #: intranet-tmpl/prog/en/modules/help/tools/import_borrowers.tt:58
-#: intranet-tmpl/prog/en/modules/help/tools/csv-profiles.tt:140
+#: intranet-tmpl/prog/en/modules/help/tools/csv-profiles.tt:141
 #: intranet-tmpl/prog/en/modules/help/tools/tools-home.tt:7
 #: intranet-tmpl/prog/en/modules/help/tools/koha-news.tt:25
 #: intranet-tmpl/prog/en/modules/help/tools/quotes.tt:41
@@ -2466,7 +2466,7 @@ msgstr ""
 #: intranet-tmpl/prog/en/modules/help/admin/z3950servers.tt:68
 #, c-format
 msgid "Any"
-msgstr ""
+msgstr "أي"
 
 #: intranet-tmpl/prog/en/modules/help/mainpage.tt:24
 #, c-format
@@ -2608,9 +2608,9 @@ msgid "Audience"
 msgstr "جمهور"
 
 #: intranet-tmpl/prog/en/modules/help/admin/z3950servers.tt:69
-#, fuzzy, c-format
+#, c-format
 msgid "Author"
-msgstr "إستناد"
+msgstr "مؤلف"
 
 #: intranet-tmpl/prog/en/modules/help/authorities/detail.tt:3
 #: intranet-tmpl/prog/en/modules/help/authorities/authorities-home.tt:3
@@ -2755,7 +2755,7 @@ msgstr "تعديل دفعة المواد"
 #: intranet-tmpl/prog/en/modules/help/tools/batch_delete_records.tt:3
 #, fuzzy, c-format
 msgid "Batch record deletion"
-msgstr "حذوفات دفعة المواد"
+msgstr "الحذف الكمّي للمواد"
 
 #: intranet-tmpl/prog/en/modules/help/labels/label-edit-batch.tt:3
 #: intranet-tmpl/prog/en/modules/help/labels/label-home.tt:40
@@ -4432,9 +4432,9 @@ msgid "Collection codes will appear as tabs above the checkboxes."
 msgstr "أكواد المجموعة سوف تظهر كتبويبات فوق صندوق الاختيار."
 
 #: intranet-tmpl/prog/en/modules/help/admin/columns_settings.tt:3
-#, c-format
+#, fuzzy, c-format
 msgid "Columns settings"
-msgstr ""
+msgstr "ڕێکخستنی پڕۆفایلەکان"
 
 #: intranet-tmpl/prog/en/modules/help/reviews/reviewswaiting.tt:3
 #, c-format
@@ -4603,7 +4603,7 @@ msgstr ""
 #: intranet-tmpl/prog/en/modules/help/admin/z3950servers.tt:60
 #, c-format
 msgid "Database"
-msgstr ""
+msgstr "قاعدة البيانات"
 
 #: intranet-tmpl/prog/en/modules/help/members/member.tt:38
 #: intranet-tmpl/prog/en/modules/help/members/members-home.tt:40
@@ -5149,7 +5149,7 @@ msgstr "البريد الإلكترونى: "
 #: intranet-tmpl/prog/en/modules/help/admin/z3950servers.tt:62
 #, c-format
 msgid "Encoding"
-msgstr ""
+msgstr "التشفير"
 
 #: intranet-tmpl/prog/en/modules/help/admin/preferences.tt:23
 #, c-format
@@ -6825,12 +6825,12 @@ msgstr ""
 #: intranet-tmpl/prog/en/modules/help/admin/z3950servers.tt:67
 #, c-format
 msgid "ISBN"
-msgstr ""
+msgstr "تدمك"
 
 #: intranet-tmpl/prog/en/modules/help/admin/z3950servers.tt:70
 #, c-format
 msgid "ISSN"
-msgstr ""
+msgstr "تدمد"
 
 #: intranet-tmpl/prog/en/modules/help/tools/letter.tt:269
 #, c-format
@@ -10028,9 +10028,9 @@ msgstr "منشئ الملصقات"
 
 #. %1$s:  fields.008.0.substr( 28, 3 ) 
 #: intranet-tmpl/prog/en/modules/help/tools/csv-profiles.tt:128
-#, c-format
+#, fuzzy, c-format
 msgid "Language=%s "
-msgstr ""
+msgstr "اللغات"
 
 #: intranet-tmpl/prog/en/modules/help/labels/label-home.tt:36
 #: intranet-tmpl/prog/en/modules/help/labels/label-edit-layout.tt:3
@@ -10283,7 +10283,7 @@ msgstr ""
 #: intranet-tmpl/prog/en/modules/help/admin/z3950servers.tt:61
 #, c-format
 msgid "MARC21/USMARC"
-msgstr ""
+msgstr "مارك21/USMARC"
 
 #: intranet-tmpl/prog/en/modules/help/admin/z3950servers.tt:86
 #, c-format
@@ -12016,7 +12016,7 @@ msgstr "إدارة توجيه القوائم"
 #: intranet-tmpl/prog/en/modules/help/members/member.tt:3
 #, fuzzy, c-format
 msgid "Patron search"
-msgstr "گەڕنی خوێنەر"
+msgstr "گەڕنی خوێنەر "
 
 #: intranet-tmpl/prog/en/modules/help/members/statistics.tt:3
 #: intranet-tmpl/prog/en/modules/help/reports/borrowers_stats.tt:3
@@ -12303,9 +12303,9 @@ msgid "Purchase Suggestions"
 msgstr "پێشنیارەکانی کڕین"
 
 #: intranet-tmpl/prog/en/modules/help/suggestion/suggestion.tt:3
-#, fuzzy, c-format
+#, c-format
 msgid "Purchase suggestions"
-msgstr "پێشنیارەکانی کڕین"
+msgstr "پێشنیاره‌كانی كڕین"
 
 #: intranet-tmpl/prog/en/modules/help/acqui/basket.tt:62
 #, c-format
@@ -12475,7 +12475,7 @@ msgstr ""
 "ئەمانە بەکار دێن بۆ چوونە ناو کڕیاری ستافەوە."
 
 #: intranet-tmpl/prog/en/modules/help/circ/renew.tt:3
-#, fuzzy, c-format
+#, c-format
 msgid "Renew"
 msgstr "نوێکردنەوە"
 
@@ -12697,9 +12697,9 @@ msgid "Search for the item you would like to catalog "
 msgstr "ابحث عن المادة التي ترغب في فهرستها "
 
 #: intranet-tmpl/prog/en/modules/help/catalogue/search-history.tt:3
-#, fuzzy, c-format
+#, c-format
 msgid "Search history"
-msgstr "البحث"
+msgstr "مێژووی گه‌ڕان"
 
 #: intranet-tmpl/prog/en/modules/help/admin/matching-rules.tt:35
 #, c-format
@@ -12824,7 +12824,7 @@ msgstr "انظر إلى التوثيق الكامل لتخطيط الميزان�
 msgid "See the full documentation for Budgets in the "
 msgstr "انظر إلى التوثيق الكامل للميزانيات في "
 
-#: intranet-tmpl/prog/en/modules/help/tools/csv-profiles.tt:140
+#: intranet-tmpl/prog/en/modules/help/tools/csv-profiles.tt:141
 #, c-format
 msgid "See the full documentation for CSV Profiles in the "
 msgstr "انظر إلى التوثيق الكامل لملفات CSV في "
@@ -13941,7 +13941,7 @@ msgstr "حقول فرعية: a"
 #: intranet-tmpl/prog/en/modules/help/admin/z3950servers.tt:71
 #, c-format
 msgid "Subject"
-msgstr ""
+msgstr "موضوع"
 
 #. %1$s:  FOREACH field IN fields.650 
 #. %2$s:  IF field.indicator.2 
@@ -13949,9 +13949,9 @@ msgstr ""
 #. %4$s:  END 
 #. %5$s:  END 
 #: intranet-tmpl/prog/en/modules/help/tools/csv-profiles.tt:123
-#, c-format
+#, fuzzy, c-format
 msgid "Subject=%s%s%s%s%s "
-msgstr ""
+msgstr "بابه‌ت: %s "
 
 #. INPUT type=submit name=submit
 #: intranet-tmpl/prog/en/modules/help/edithelp.tt:36
@@ -13991,7 +13991,7 @@ msgstr "أهداف Z39.50 المقترحة"
 #: intranet-tmpl/prog/en/modules/help/admin/z3950servers.tt:61
 #, c-format
 msgid "Syntax"
-msgstr ""
+msgstr "القواعد اللغوية"
 
 #: intranet-tmpl/prog/en/modules/help/admin/preferences.tt:3
 #, c-format
@@ -16407,9 +16407,9 @@ msgid "Time should be entered as hh:mm (2 digit hour, 2 digit minute)"
 msgstr "يجب إدخال الوقت  مثل HH: MM  (2ساعة أرقام، أرقام 2 دقيقة)"
 
 #: intranet-tmpl/prog/en/modules/help/about.tt:34
-#, c-format
+#, fuzzy, c-format
 msgid "Timeline"
-msgstr ""
+msgstr "الجدول الزمني لكوها"
 
 #: intranet-tmpl/prog/en/modules/help/circ/circulation.tt:31
 #, c-format
@@ -16626,15 +16626,15 @@ msgstr ""
 #: intranet-tmpl/prog/en/modules/help/admin/z3950servers.tt:66
 #, c-format
 msgid "Title"
-msgstr ""
+msgstr "عنوان"
 
 #. %1$s:  IF fields.100.0.indicator.1 
 #. %2$s:  fields.245.0.a.0 
 #. %3$s:  END 
 #: intranet-tmpl/prog/en/modules/help/tools/csv-profiles.tt:133
-#, c-format
+#, fuzzy, c-format
 msgid "Title=%s%s%s "
-msgstr ""
+msgstr "تێبینیەکان: %s%s %s "
 
 #: intranet-tmpl/prog/en/modules/help/tools/csv-profiles.tt:58
 #, c-format
@@ -17569,7 +17569,7 @@ msgstr "أستكشاف الخطأ و إصلاحه"
 #: intranet-tmpl/prog/en/modules/help/admin/z3950servers.tt:51
 #, c-format
 msgid "UNIMARC"
-msgstr ""
+msgstr "UNIMARC"
 
 #: intranet-tmpl/prog/en/modules/help/acqui/uncertainprice.tt:3
 #, c-format
@@ -19339,9 +19339,9 @@ msgstr "خوادم Z39.50"
 msgid "Zip up the text file and the image files"
 msgstr "قم بضغط الملف النصي وملفات الصور"
 
-#: intranet-tmpl/prog/en/modules/help/tools/csv-profiles.tt:140
+#: intranet-tmpl/prog/en/modules/help/tools/csv-profiles.tt:138
 #, c-format
-msgid "[- INCLUDE 'help-bottom.inc' -] "
+msgid "[- TAGS default -] "
 msgstr ""
 
 #: intranet-tmpl/prog/en/modules/help/cataloguing/additem.tt:13
@@ -20234,7 +20234,7 @@ msgstr "إدارة "
 #: intranet-tmpl/prog/en/modules/help/tools/viewlog.tt:11
 #: intranet-tmpl/prog/en/modules/help/tools/marc_modification_templates.tt:61
 #: intranet-tmpl/prog/en/modules/help/tools/import_borrowers.tt:58
-#: intranet-tmpl/prog/en/modules/help/tools/csv-profiles.tt:140
+#: intranet-tmpl/prog/en/modules/help/tools/csv-profiles.tt:141
 #: intranet-tmpl/prog/en/modules/help/tools/tools-home.tt:7
 #: intranet-tmpl/prog/en/modules/help/tools/koha-news.tt:25
 #: intranet-tmpl/prog/en/modules/help/tools/quotes.tt:41
@@ -20602,9 +20602,9 @@ msgid "what appears before the subfield in the librarian interface"
 msgstr "ما يظهر قبل الحقل الفرعي في واجهة المكتبي"
 
 #: intranet-tmpl/prog/en/modules/help/tools/csv-profiles.tt:77
-#, c-format
+#, fuzzy, c-format
 msgid "will be stored into the following structure:"
-msgstr ""
+msgstr "عدّل قاعدة تطابق التسجيلة"
 
 #: intranet-tmpl/prog/en/modules/help/reports/reports-home.tt:11
 #, c-format

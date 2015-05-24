@@ -18,7 +18,7 @@
 # along with Koha; if not, see <http://www.gnu.org/licenses>.
 
 use Modern::Perl;
-use Test::More tests => 40;
+use Test::More tests => 41;
 
 BEGIN {
     use_ok('t::lib::TestBuilder');
@@ -236,6 +236,7 @@ is( $bookseller_result->in_storage, 1, 'build with only_fk = 1 creates the forei
 $bookseller = $builder->build({
     source  => 'Aqbookseller',
 });
+ok( length( $bookseller->{phone} ) <= 30, 'The length for a generated string should not be longer than the size of the DB field' );
 delete $bookseller->{_fk};
 $bookseller_from_db = $rs_aqbookseller->find($bookseller);
 is( $bookseller_from_db->in_storage, 1, 'build without the parameter only_sk stores the entry correctly' );

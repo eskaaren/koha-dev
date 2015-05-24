@@ -40,17 +40,18 @@ function openAuth(tagsubfieldid,authtype,source) {
     var tagsubfield=getTagInputnameFilter(tagsubfieldid);
     var elementsubfcode=getSubfieldCode(element.name);
     var mainmainstring=element.value;
-    var mainstring="";
+    var mainstring = new Array();
     var inputs = element.parentNode.parentNode.getElementsByTagName("input");
 
     for (var myindex =0; myindex<inputs.length;myindex++){
         if (inputs[myindex].name && inputs[myindex].name.match(tagsubfield)){
             var subfieldcode=getSubfieldCode(inputs[myindex].name);
             if (isNaN(parseInt(subfieldcode)) && inputs[myindex].value != "" && subfieldcode!=elementsubfcode){
-                mainstring=inputs[myindex].value+" "+mainstring;
+                mainstring.push(inputs[myindex].value);
             }
         }
     }
+    mainstring = mainstring.join(' ');
     newin=window.open("../authorities/auth_finder.pl?source="+source+"&authtypecode="+authtype+"&index="+tagsubfieldid+"&value_mainstr="+encodeURI(mainmainstring)+"&value_main="+encodeURI(mainstring), "_blank",'width=700,height=550,toolbar=false,scrollbars=yes');
 }
 
@@ -131,7 +132,8 @@ function CloneField(index, hideMarc, advancedMARCEditor) {
                 }
             }
             if( $(inputs[1]).hasClass('framework_plugin') ) {
-                var oldcontrol= original.getElementsByTagName('input')[1];
+                var olddiv= original.getElementsByTagName('div')[i];
+                var oldcontrol= olddiv.getElementsByTagName('input')[1];
                 AddEventHandlers( oldcontrol,inputs[1],id_input );
             }
 
@@ -177,7 +179,8 @@ function CloneField(index, hideMarc, advancedMARCEditor) {
                         // 2 possibilities :
                         try{
                             if( $(buttonDot).hasClass('framework_plugin') ) {
-                                var oldcontrol= original.getElementsByTagName('a')[0];
+                                var olddiv= original.getElementsByTagName('div')[i];
+                                var oldcontrol= olddiv.getElementsByTagName('a')[0];
                                 AddEventHandlers(oldcontrol,buttonDot,id_input);
                             } else {
                                 if(buttonDotOnClick.match('Dopop')) {  // -2- It's a auth value

@@ -9825,7 +9825,10 @@ if ( CheckVersion($DBversion) ) {
 
 $DBversion = "3.19.00.010";
 if ( CheckVersion($DBversion) ) {
-    $dbh->do("INSERT INTO `systempreferences` (variable,value,explanation,options,type) VALUES('SessionRestrictionByIP','1','Check for Change in  Remote IP address for Session Security. Disable when remote ip address changes frequently.','','YesNo')");
+    $dbh->do(q|
+        INSERT IGNORE INTO systempreferences (variable,value,explanation,options,type)
+        VALUES('SessionRestrictionByIP','1','Check for Change in  Remote IP address for Session Security. Disable when remote ip address changes frequently.','','YesNo')
+    |);
     print "Upgrade to $DBversion done (Bug 5511: SessionRestrictionByIP)\n";
     SetVersion ($DBversion);
 }
@@ -10389,6 +10392,73 @@ if ( CheckVersion($DBversion) ) {
         SET created_on = lastmodified, lastmodified = lastmodified
     |);
     print "Upgrade to $DBversion done (Bug 13421: Add DB field virtualshelves.created_on)\n";
+    SetVersion ($DBversion);
+}
+
+$DBversion = "3.19.00.039";
+if ( CheckVersion($DBversion) ) {
+    print "Upgrade to $DBversion done (Koha 3.20 beta)\n";
+    SetVersion ($DBversion);
+}
+
+$DBversion = "3.19.00.040";
+if ( CheckVersion($DBversion) ) {
+    $dbh->do(q|
+        ALTER TABLE aqorders DROP COLUMN totalamount
+    |);
+    print "Upgrade to $DBversion done (Bug 11006: Drop column aqorders.totalamount)\n";
+    SetVersion ($DBversion);
+}
+
+$DBversion = "3.19.00.041";
+if ( CheckVersion($DBversion) ) {
+    $dbh->do(q|
+        ALTER IGNORE TABLE suggestions ADD KEY status (STATUS)
+    |);
+    $dbh->do(q|
+        ALTER IGNORE TABLE suggestions ADD KEY biblionumber (biblionumber)
+    |);
+    $dbh->do(q|
+        ALTER IGNORE TABLE suggestions ADD KEY branchcode (branchcode)
+    |);
+    print "Upgrade to $DBversion done (Bug 14132: suggestions table is missing indexes)\n";
+    SetVersion ($DBversion);
+}
+
+$DBversion = "3.19.00.042";
+if ( CheckVersion($DBversion) ) {
+    $dbh->do(q{
+        DELETE ass.*
+        FROM auth_subfield_structure AS ass
+        LEFT JOIN auth_types USING(authtypecode)
+        WHERE auth_types.authtypecode IS NULL
+    });
+
+    $dbh->do(q{
+        ALTER IGNORE TABLE auth_subfield_structure
+        ADD CONSTRAINT auth_subfield_structure_ibfk_1
+        FOREIGN KEY (authtypecode) REFERENCES auth_types(authtypecode)
+        ON DELETE CASCADE ON UPDATE CASCADE
+    });
+
+    print "Upgrade to $DBversion done (Bug 8480: Add foreign key on auth_subfield_structure.authtypecode)\n";
+    SetVersion($DBversion);
+}
+
+$DBversion = "3.19.00.043";
+if ( CheckVersion($DBversion) ) {
+    $dbh->do(q|
+        INSERT IGNORE INTO authorised_values (category, authorised_value, lib) VALUES
+        ('REPORT_GROUP', 'SER', 'Serials')
+    |);
+
+    print "Upgrade to $DBversion done (Bug 5338: Add Serial to the report groups if does not exist)\n";
+    SetVersion ($DBversion);
+}
+
+$DBversion = "3.20.00.000";
+if ( CheckVersion($DBversion) ) {
+    print "Upgrade to $DBversion done (Koha 3.20)\n";
     SetVersion ($DBversion);
 }
 

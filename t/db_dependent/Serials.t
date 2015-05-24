@@ -15,7 +15,7 @@ use C4::Bookseller;
 use C4::Biblio;
 use C4::Budgets;
 use Koha::DateUtils;
-use Test::More tests => 47;
+use Test::More tests => 46;
 
 BEGIN {
     use_ok('C4::Serials');
@@ -181,8 +181,6 @@ is(C4::Serials::HasSubscriptionStrictlyExpired(), undef, 'test if the subscripti
 is(C4::Serials::HasSubscriptionExpired(), undef, 'test if the subscriptions has expired');
 
 is(C4::Serials::GetLateOrMissingIssues(), undef, 'test getting last or missing issues');
-
-is(C4::Serials::removeMissingIssue(), undef, 'test removing a missing issue');
 
 is(C4::Serials::updateClaim(),undef, 'test updating claim');
 

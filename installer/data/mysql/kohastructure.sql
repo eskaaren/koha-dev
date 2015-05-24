@@ -58,7 +58,8 @@ CREATE TABLE `auth_subfield_structure` (
   `frameworkcode` varchar(10) NOT NULL default '',
   `defaultvalue` TEXT DEFAULT '',
   PRIMARY KEY  (`authtypecode`,`tagfield`,`tagsubfield`),
-  KEY `tab` (`authtypecode`,`tab`)
+  KEY `tab` (`authtypecode`,`tab`),
+  CONSTRAINT `auth_subfield_structure_ibfk_1` FOREIGN KEY (`authtypecode`) REFERENCES `auth_types` (`authtypecode`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -2203,6 +2204,9 @@ CREATE TABLE `suggestions` ( -- purchase suggestions
   PRIMARY KEY  (`suggestionid`),
   KEY `suggestedby` (`suggestedby`),
   KEY `managedby` (`managedby`),
+  KEY `status` (`STATUS`),
+  KEY `biblionumber` (`biblionumber`),
+  KEY `branchcode` (`branchcode`),
   CONSTRAINT `suggestions_budget_id_fk` FOREIGN KEY (`budgetid`) REFERENCES `aqbudgets` (`budget_id`) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -3037,7 +3041,6 @@ CREATE TABLE `aqorders` ( -- information related to the basket line items
   `quantity` smallint(6) default NULL, -- the quantity ordered
   `currency` varchar(3) default NULL, -- the currency used for the purchase
   `listprice` decimal(28,6) default NULL, -- the vendor price for this line item
-  `totalamount` decimal(28,6) default NULL, -- not used? always NULL
   `datereceived` date default NULL, -- the date this order was received
   invoiceid int(11) default NULL, -- id of invoice
   `freight` decimal(28,6) default NULL, -- shipping costs (not used)
