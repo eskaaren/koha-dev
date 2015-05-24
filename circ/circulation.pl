@@ -534,9 +534,8 @@ my $roadtype = C4::Koha::GetAuthorisedValueByCode( 'ROADTYPE', $borrower->{stree
 $template->param(%$borrower);
 
 unless ($stickyduedate eq 'on') {
-    $duedatespec = ''; #$restoreduedatespec;
+    $duedatespec = '';
 } else {
-    #$duedatespec = $session->param('stickyduedate') || $query->param('restoreduedatespec');
     if ($restoreduedatespec) {
         $duedatespec = $restoreduedatespec;
     }

@@ -297,7 +297,6 @@ $(document).ready(function() {
 [% END %]
 </ul>
 
-
 [% IF HIGHHOLDS %]
 	<script language="JavaScript" type="text/javascript">
 	$(document).ready(function() {
