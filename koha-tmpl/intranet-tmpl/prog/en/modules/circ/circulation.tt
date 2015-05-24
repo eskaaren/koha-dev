@@ -297,16 +297,18 @@ $(document).ready(function() {
 [% END %]
 </ul>
 
+
 [% IF HIGHHOLDS %]
 	<script language="JavaScript" type="text/javascript">
 	$(document).ready(function() {
-		$("input[name=duedatespec]:hidden").val('[% HIGHHOLDS.returndate %]');
+            $("input[name=duedatespec]:hidden").val('[% HIGHHOLDS.returndate %]');
 	});
 	</script>
 [% END %]
 
 [% IF CAN_user_circulate_force_checkout or HIGHHOLDS %]
 <form method="post" action="/cgi-bin/koha/circ/circulation.pl" autocomplete="off">
+    <input type="hidden" name="restoreduedatespec" value="[% duedatespec %]" />
 
 [% IF (forceallow) %]<input type="hidden" name="forceallow" value="1">[% END %]
 
@@ -353,6 +355,7 @@ $(document).ready(function() {
     [% IF (forceallow) %]<input type="hidden" name="forceallow" value="1">[% END %]
     <input type="hidden" name="borrowernumber" value="[% borrowernumber %]" />
     <input type="hidden" name="duedatespec" value="[% duedatespec %]" />
+    <input type="hidden" name="restoreduedatespec" value="[% duedatespec %]" />
     <input type="hidden" name="stickyduedate" value="[% stickyduedate %]" />
     [% IF CAN_user_circulate_force_checkout or HIGHHOLDS %]
         [% IF ( RENEW_ISSUE ) %]
@@ -403,6 +406,7 @@ $(document).ready(function() {
                     [% IF (forceallow) %]<input type="hidden" name="forceallow" value="1">[% END %]
                         <input type="hidden" name="borrowernumber" value="[% borrowernumber %]" />
                         <input type="hidden" name="duedatespec" value="[% duedatespec %]" />
+                        <input type="hidden" name="restoreduedatespec" value="[% duedatespec %]" />
                         <input type="hidden" name="stickyduedate" value="[% stickyduedate %]" />
                         <input type="hidden" name="branch" value="[% branch %]" />
                         <input type="hidden" name="barcode" value="[% book.barcode %]" />
@@ -508,11 +512,11 @@ No patron matched <span class="ex">[% message %]</span>
 </h4>
 [% END %]
 
-
 [% IF ( borrowers ) %]
 [% INCLUDE 'patron-toolbar.inc' %]
 
 <form method="post" action="/cgi-bin/koha/circ/circulation.pl" id="mainform" name="mainform" autocomplete="off">
+    <input type="hidden" name="restoreduedatespec" value="[% duedatespec %]" />
 <fieldset id="circ_circulation_selectborrower" class="brief">
     <legend>Patron selection</legend>
 
@@ -563,8 +567,8 @@ No patron matched <span class="ex">[% message %]</span>
 
 [% END %]
 
-
 <form method="post" action="/cgi-bin/koha/circ/circulation.pl" id="mainform" name="mainform" autocomplete="off">
+    <input type="hidden" name="restoreduedatespec" value="[% duedatespec %]" />
 [% IF ( issue ) %]
     <fieldset id="circ_circulation_issue" class="lastchecked">
 [% ELSE %]
@@ -748,8 +752,6 @@ No patron matched <span class="ex">[% message %]</span>
             </li>
 			[% END %]
 
-
-
 			</ul>
         </div>
 
@@ -808,7 +810,6 @@ No patron matched <span class="ex">[% message %]</span>
      <!-- /If flagged -->[% END %]
 
 	
-
 </div>
 </div>
 
@@ -921,8 +922,6 @@ No patron matched <span class="ex">[% message %]</span>
 [% END %] <!-- borrowernumber -->
 </div></div>
 [% END %]
-
-
 
 </div>
 </div>

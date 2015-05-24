@@ -55,7 +55,6 @@ use Date::Calc qw(
 );
 use List::MoreUtils qw/uniq/;
 
-
 #
 # PARAMETERS READING
 #
@@ -122,7 +121,6 @@ my $borrowernumber = $query->param('borrowernumber');
 $branch  = C4::Context->userenv->{'branch'};  
 $printer = C4::Context->userenv->{'branchprinter'};
 
-
 # If AutoLocation is not activated, we show the Circulation Parameters to chage settings of librarian
 if (C4::Context->preference("AutoLocation") != 1) {
     $template->param(ManualLocation => 1);
@@ -138,6 +136,7 @@ $barcode =~  s/^\s*|\s*$//g; # remove leading/trailing whitespace
 $barcode = barcodedecode($barcode) if( $barcode && C4::Context->preference('itemBarcodeInputFilter'));
 my $stickyduedate  = $query->param('stickyduedate') || $session->param('stickyduedate');
 my $duedatespec    = $query->param('duedatespec')   || $session->param('stickyduedate');
+my $restoreduedatespec = $query->param('restoreduedatespec') || $session->param('stickyduedate');
 my $issueconfirmed = $query->param('issueconfirmed');
 my $cancelreserve  = $query->param('cancelreserve');
 my $print          = $query->param('print') || q{};
@@ -534,6 +533,16 @@ my $roadtype = C4::Koha::GetAuthorisedValueByCode( 'ROADTYPE', $borrower->{stree
 
 $template->param(%$borrower);
 
+unless ($stickyduedate eq 'on') {
+    $duedatespec = ''; #$restoreduedatespec;
+} else {
+    #$duedatespec = $session->param('stickyduedate') || $query->param('restoreduedatespec');
+    if ($restoreduedatespec) {
+        $duedatespec = $restoreduedatespec;
+    }
+    $session->param( 'stickyduedate', $duedatespec );
+}
+
 $template->param(
     lib_messages_loop => $lib_messages_loop,
     bor_messages_loop => $bor_messages_loop,
@@ -552,6 +561,7 @@ $template->param(
     barcode           => $barcode,
     stickyduedate     => $stickyduedate,
     duedatespec       => $duedatespec,
+    restoreduedatespec => $restoreduedatespec,
     message           => $message,
     totaldue          => sprintf('%.2f', $total),
     inprocess         => $inprocess,
