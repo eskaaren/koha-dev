@@ -5,7 +5,7 @@
         <div id="addbooks_search" class="residentsearch">
         <p class="tip">Search the catalog and the reservoir:</p>
             <form name="search" action="addbooks.pl">
-                <input class="query" type="text" name="q" size="40" />
+                <input class="head-searchbox" type="text" name="q" size="40" />
                 <input type="submit" class="submit" value="Submit" />
             </form>
         </div>
@@ -14,7 +14,7 @@
         <div id="checkin_search" class="residentsearch">
             <p class="tip">Scan a barcode to check in:</p>
             <form method="post" action="/cgi-bin/koha/circ/returns.pl" autocomplete="off">
-                <input class="query" name="barcode" id="ret_barcode" size="40" />
+                <input class="head-searchbox" name="barcode" id="ret_barcode" size="40" />
                 <input value="Submit" class="submit" type="submit" />
             </form>
         </div>
@@ -23,7 +23,7 @@
         <div id="catalog_search" class="residentsearch">
             <p class="tip">Enter search keywords:</p>
             <form action="/cgi-bin/koha/catalogue/search.pl"  method="get" id="cat-search-block">
-                <input type="text" name="q" id="search-form" size="40" value="" title="Enter the terms you wish to search for." class="query form-text" />
+                <input type="text" name="q" id="search-form" size="40" value="" title="Enter the terms you wish to search for." class="head-searchbox form-text" />
                 <input type="submit" class="submit" value="Submit" />
             </form>
         </div>
@@ -37,5 +37,4 @@
         </ul>
     </div><!-- /header_search -->
 </div><!-- /gradient -->
-[% INCLUDE 'searchbox-keep-text.inc' %]
 <!-- End Cataloging Resident Search Box -->

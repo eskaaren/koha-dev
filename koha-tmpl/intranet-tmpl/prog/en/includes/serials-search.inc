@@ -22,7 +22,7 @@
       <div id="catalog_search" class="residentsearch">
         <p class="tip">Enter search keywords:</p>
         <form action="/cgi-bin/koha/catalogue/search.pl"  method="get" id="cat-search-block">
-          <input type="text" name="q" id="search-form" size="40" value="" title="Enter the terms you wish to search for." class="query form-text" />
+          <input type="text" name="q" id="search-form" size="40" value="" title="Enter the terms you wish to search for." class="head-searchbox form-text" />
           <input type="submit" value="Submit"  class="submit" />
         </form>
       </div>
@@ -34,5 +34,4 @@
     </ul>
   </div><!-- /header_search -->
 </div><!-- /gradient -->
-[% INCLUDE 'searchbox-keep-text.inc' %]
 <!-- End Serials Resident Search Box -->

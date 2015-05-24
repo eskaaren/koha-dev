@@ -39,5 +39,4 @@
             </ul>
 </div>
 </div>
-[% INCLUDE 'searchbox-keep-text' %]
 <!-- End Suggestions Resident Search Box -->

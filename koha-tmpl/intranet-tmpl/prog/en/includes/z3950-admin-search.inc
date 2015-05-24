@@ -4,7 +4,7 @@
     <div id="z3950_search" class="residentsearch">
     <p class="tip">Z39.50/SRU server search:</p>
 	<form action="/cgi-bin/koha/admin/z3950servers.pl" method="post">
-                <input class="query" type="text" name="searchfield" size="40" value="[% searchfield %]" />
+                <input class="head-searchbox" type="text" name="searchfield" size="40" value="[% searchfield %]" />
                 <input type="submit" class="submit" name="search" value="Search" />
         </form>
 	</div>
@@ -15,7 +15,7 @@
     <div id="catalog_search" class="residentsearch">
 	<p class="tip">Enter search keywords:</p>
 		<form action="/cgi-bin/koha/catalogue/search.pl"  method="get" id="cat-search-block">
-			 <input type="text" name="q" id="search-form" size="40" value="" title="Enter the terms you wish to search for." class="query form-text" />
+			 <input type="text" name="q" id="search-form" size="40" value="" title="Enter the terms you wish to search for." class="head-searchbox form-text" />
 				<input type="submit" value="Submit"  class="submit" />
 		</form>
 	</div>
@@ -27,5 +27,4 @@
 			</ul>	
 </div>
 </div>
-[% INCLUDE 'searchbox-keep-text.inc' %]
 <!-- End Members Resident Search Box -->

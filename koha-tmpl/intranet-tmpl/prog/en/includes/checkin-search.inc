@@ -6,7 +6,7 @@
 <div id="catalog_search" class="residentsearch">
     <p class="tip">Enter search keywords:</p>
     <form action="/cgi-bin/koha/catalogue/search.pl"  method="get" id="cat-search-block">
-        <input class="query" type="text" name="q" id="search-form" size="40" />
+        <input class="head-searchbox" type="text" name="q" id="search-form" size="40" />
         <input type="submit" class="submit" value="Submit"/>
     </form>
 </div>
@@ -18,5 +18,4 @@
 
 </div>
 </div><!-- /gradient -->
-[% INCLUDE 'searchbox-keep-text.inc' %]
 <!-- End Checkin Resident Search Box -->

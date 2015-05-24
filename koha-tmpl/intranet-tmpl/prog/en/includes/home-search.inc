@@ -7,7 +7,7 @@
 <div id="checkin_search" class="residentsearch">
     <p class="tip">Scan a barcode to check in:</p>
     <form method="post" action="/cgi-bin/koha/circ/returns.pl" autocomplete="off">
-        <input name="barcode" class="query" id="ret_barcode" size="40" accesskey="r" />
+        <input name="barcode" class="head-searchbox" id="ret_barcode" size="40" accesskey="r" />
         <input value="Submit" class="submit" type="submit" />
     </form>
 </div>[% END %]
@@ -15,7 +15,7 @@
 <div id="patron_search" class="residentsearch">
     <p class="tip">Enter patron card number or partial name:</p>
     <form action="/cgi-bin/koha/members/member.pl" method="post">
-        <input name="searchmember" class="query" id="searchmember" size="40" type="text"/>
+        <input name="searchmember" class="head-searchbox" id="searchmember" size="40" type="text"/>
         <input type="hidden" name="quicksearch" value="1" />
         <input value="Submit" class="submit" type="submit" />
     </form>
@@ -24,7 +24,7 @@
 <div id="catalog_search" class="residentsearch">
     <p class="tip">Enter search keywords:</p>
     <form action="/cgi-bin/koha/catalogue/search.pl"  method="get" id="cat-search-block">
-        <input type="text" name="q" id="search-form" class="query" size="40" accesskey="q" />
+        <input type="text" name="q" id="search-form" class="head-searchbox" size="40" accesskey="q" />
         <input type="submit" class="submit" value="Submit"/>
     </form>
 </div>[% END %]
@@ -38,5 +38,4 @@
 
 </div><!-- /header_search -->
 </div><!-- /gradient -->
-[% INCLUDE 'searchbox-keep-text.inc' %]
 <!-- End Main page Resident Search Box -->

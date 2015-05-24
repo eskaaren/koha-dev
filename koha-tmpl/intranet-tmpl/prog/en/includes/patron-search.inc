@@ -7,7 +7,7 @@
     <div id="patron_search" class="residentsearch">
     <p class="tip">Enter patron card number or partial name:</p>
     <form action="/cgi-bin/koha/members/member.pl" method="post">
-    <input id="searchmember" data-toggle="tooltip" size="25" class="query focus" name="searchmember" type="text" value="[% searchmember %]"/>
+    <input id="searchmember" data-toggle="tooltip" size="25" class="head-searchbox focus" name="searchmember" type="text" value="[% searchmember %]"/>
     <input type="hidden" name="quicksearch" value="1" />
     <span class="filteraction" id="filteraction_off"> <a href="#">[-]</a></span>
     <span class="filteraction" id="filteraction_on"> <a href="#">[+]</a></span>
@@ -113,7 +113,7 @@
     <div id="catalog_search" class="residentsearch">
     <p class="tip">Enter search keywords:</p>
         <form action="/cgi-bin/koha/catalogue/search.pl"  method="get" id="cat-search-block">
-             <input type="text" name="q" id="search-form" size="40" value="" title="Enter the terms you wish to search for." class="query form-text" />
+             <input type="text" name="q" id="search-form" size="40" value="" title="Enter the terms you wish to search for." class="head-searchbox form-text" />
                 <input type="submit" name="op" id="opac-submit" value="Submit" class="submit" />
         </form>
     </div>[% END %]
@@ -121,7 +121,7 @@
     <div id="checkin_search" class="residentsearch">
     <p class="tip">Scan a barcode to check in:</p>
     <form method="post" action="/cgi-bin/koha/circ/returns.pl" autocomplete="off">
-    <input class="query" name="barcode" id="ret_barcode" size="40" accesskey="r" />
+    <input class="head-searchbox" name="barcode" id="ret_barcode" size="40" accesskey="r" />
     <input value="Submit" class="submit" type="submit" />
     </form>
     </div>
@@ -134,7 +134,6 @@
     </ul>
 </div><!-- /header_search -->
 </div><!-- /gradient -->
-[% INCLUDE 'searchbox-keep-text.inc' %]
 <script type="text/javascript">//<![CDATA[
 $(document).ready(function() {
     $("#filteraction_off, #filteraction_on").on('click', function(e) {

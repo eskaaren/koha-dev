@@ -4,7 +4,7 @@
 	<div id="city_search" class="residentsearch">
     <p class="tip">City search:</p>
 	<form action="[% script_name %]" method="post">
-		<input class="query" type="text" name="city_name" value="[% searchfield %]" size="40" />
+		<input class="head-searchbox" type="text" name="city_name" value="[% searchfield %]" size="40" />
 		<input type="submit" name="submit" value="OK" class="submit" />
 	</form>
 	</div>
@@ -15,7 +15,7 @@
     <div id="catalog_search" class="residentsearch">
 	<p class="tip">Enter search keywords:</p>
 		<form action="/cgi-bin/koha/catalogue/search.pl"  method="get" id="cat-search-block">
-			 <input type="text" name="q" id="search-form" size="40" value="" title="Enter the terms you wish to search for." class="query form-text" />
+			 <input type="text" name="q" id="search-form" size="40" value="" title="Enter the terms you wish to search for." class="head-searchbox form-text" />
 				<input type="submit" value="Submit"  class="submit" />
 		</form>
 	</div>[% END %]
@@ -26,5 +26,4 @@
 			</ul>	
 </div>
 </div>
-[% INCLUDE 'searchbox-keep-text.inc' %]
 <!-- End Cities Resident Search Box -->

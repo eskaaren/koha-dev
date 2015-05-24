@@ -5,7 +5,7 @@
 	<div id="contract_description_search" class="residentsearch">
 	<p class="tip">Search by contract name or/and description:</p>
 	<form action="[% script_name %]" method="post">
-		<input class="query" type="text" name="searchfield" size="40" value="[% searchfield %]" />
+		<input class="head-searchbox" type="text" name="searchfield" size="40" value="[% searchfield %]" />
 		<input type="submit" class="submit" name="search" value="Search" />
 	</form>	
 	</div>
@@ -16,7 +16,7 @@
     <div id="catalog_search" class="residentsearch">
 	<p class="tip">Enter search keywords:</p>
 		<form action="/cgi-bin/koha/catalogue/search.pl"  method="get" id="cat-search-block">
-			 <input type="text" name="q" id="search-form" size="40" value="" title="Enter the terms you wish to search for." class="query form-text" />
+			 <input type="text" name="q" id="search-form" size="40" value="" title="Enter the terms you wish to search for." class="head-searchbox form-text" />
 				<input type="submit" value="Submit"  class="submit" />
 		</form>
 	</div>[% END %]
@@ -27,5 +27,4 @@
 			</ul>	
 </div>
 </div><!-- /gradient -->
-[% INCLUDE 'searchbox-keep-text.inc' %]
 <!-- End Patrons Admin Resident Search Box -->

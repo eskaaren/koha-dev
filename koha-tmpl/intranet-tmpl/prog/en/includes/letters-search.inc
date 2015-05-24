@@ -4,7 +4,7 @@
 	<div id="notices_search" class="residentsearch">
     <p class="tip">Search existing notices:</p>
 <form action="/cgi-bin/koha/tools/letter.pl" method="post">
-		<input class="query" type="text" name="searchfield" size="40" value="" />
+		<input class="head-searchbox" type="text" name="searchfield" size="40" value="" />
                 <input type="submit" class="submit" name="search" value="Search" />
         </form>	
 	</div>
@@ -13,7 +13,7 @@
     <div id="catalog_search" class="residentsearch">
 	<p class="tip">Enter search keywords:</p>
 		<form action="/cgi-bin/koha/catalogue/search.pl"  method="get" id="cat-search-block">
-			 <input type="text" name="q" id="search-form" size="40" value="" title="Enter the terms you wish to search for." class="query form-text" />
+			 <input type="text" name="q" id="search-form" size="40" value="" title="Enter the terms you wish to search for." class="head-searchbox form-text" />
 				<input type="submit" name="op" value="Submit"  class="submit" />
 		</form>
 	</div>[% END %]
@@ -24,5 +24,4 @@
 			</ul>	
 </div>
 </div><!-- /gradient -->
-[% INCLUDE 'searchbox-keep-text.inc' %]
 <!-- End Notices Resident Search Box -->
